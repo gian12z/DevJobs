@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="busqueda_styles.css">
+    <title>DevJobs - Busqueda</title>
+</head>
+<body>
+    <header>
+    <h2>DevJobs</h2>
+    <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="Empleos">Empleos</a>
+        <a href="Empresa">Empresa</a>
+        <a href="Salarios">Salarios</a>
+    </nav>
+    <div class="acciones">
+        <a href="">Subir CV</a>
+        <a href="">Iniciar sesión</a>
+    </div>
+</header>
+
+    <section>
+        <h1>Encuentra tu proximo trabajo</h1>
+        <p>Explora miles de oportunidades en el sector tecnologico</p>
+        <form role="search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                    <path d="M21 21l-6 -6" />
+                </svg>
+                <input class="text" placeholder="Buscar empleos, habilidad o empresa">
+            </form>
+    <div class="filtros">
+        <select id="tecnologia" name="tecnologia">
+            <option value="">Tecnología</option>
+            <option value="frontend">Frontend</option>
+            <option value="backend">Backend</option>
+            <option value="fullstack">Fullstack</option>
+        </select>
+
+        <select id="ubicacion" name="ubicacion">
+            <option value="">Ubicación</option>
+            <option value="remoto">Remoto</option>
+            <option value="mexico">México</option>
+            <option value="argentina">Argentina</option>
+        </select>
+
+        <select id="contrato" name="contrato">
+            <option value="">Tipo de contrato</option>
+            <option value="tiempo-completo">Tiempo completo</option>
+            <option value="medio-tiempo">Medio tiempo</option>
+            <option value="freelance">Freelance</option>
+        </select>
+
+        <select id="experiencia" name="experiencia">
+            <option value="">Nivel de experiencia</option>
+            <option value="tiempo-completo">Semi-Senior</option>
+            <option value="medio-tiempo">Senior</option>
+        </select>
+    </div>
+    </section>
+
+    <section>
+        <h3>Resultados de busqueda</h3>
+        <div class="card">
+            <p>Ingeniero de Software</p>
+            <p>Tech Solutions Inc. | Remoto</p>
+            <p>Buscamos un ingeniero de software con experiencia en desarrollo web y conocimientos en JavaScript, React y Node.js...</p>
+            <button>Aplicar</button>
+        </div>
+
+        <div class="card">
+            <p>Analista de datos</p>
+            <p>Data Driver Inc. | Remoto</p>
+            <p>Buscamos un analista en datos Senior que tenga muchas ganas de trabajar</p>
+            <button>Aplicar</button>
+        </div>
+
+        <div class="card">
+            <p>Desarrollador de Aplicaciones Moviles</p>
+            <p>Empresa Copada Inc. | Buenos aires Argentina</p>
+            <p>Buscamos un crack en Desarrollo de Aplicaciones Moviles</p>
+            <button>Aplicar</button>
+        </div>
+
+        <div class="card">
+            <p>Ingeniero de DevOps</p>
+            <p>Cloud Service | Bahia Blanca Argentina</p>
+            <p>Buscamos un programador llamado Gianluca que sea crack en la programacion</p>
+            <button>Aplicar</button>
+        </div>
+    </section>
+    <footer>
+        <div class="paginacion">
+            <button>&#8592;</button> <!-- ←  son simbolos unicode -->
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>&#8594;</button> <!-- → -->
+        </div>
+
+    </footer>
+</body>
+</html>
