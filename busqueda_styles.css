@@ -212,3 +212,53 @@ header {
         max-width: none;
     }
 }
+
+h3{
+    margin-left: 19rem;
+}
+
+/* Tarjetas de busqueda */
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px var(--shadow);
+    padding: 1rem;
+    margin: 1rem auto;
+    max-width: 42rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card button{
+    align-self: flex-end;
+    background-color: var(--primary-light);
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 2rem 0;
+}
+
+.paginacion button {
+    background-color: var(--input-bg);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 10px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
