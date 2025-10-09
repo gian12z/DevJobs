@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="busqueda_styles.css">
+    <script type="module" src="script.js"></script>
     <title>DevJobs - Busqueda</title>
 </head>
 <body>
@@ -25,6 +26,7 @@
         <h1>Encuentra tu proximo trabajo</h1>
         <p>Explora miles de oportunidades en el sector tecnologico</p>
         <form role="search">
+            <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
                     class="icon icon-tabler icons-tabler-outline icon-tabler-search">
@@ -33,7 +35,9 @@
                     <path d="M21 21l-6 -6" />
                 </svg>
                 <input class="text" placeholder="Buscar empleos, habilidad o empresa">
+            </div>
             </form>
+            
     <div class="filtros">
         <select id="tecnologia" name="tecnologia">
             <option value="">Tecnología</option>
@@ -66,32 +70,34 @@
 
     <section>
         <h3>Resultados de busqueda</h3>
+        <div class="lista-empleos">
         <div class="card">
-            <button>Aplicar</button>
+            <button class="button-apply">Aplicar</button>
             <p>Ingeniero de Software</p>
             <p>Tech Solutions Inc. | Remoto</p>
             <p>Buscamos un ingeniero de software con experiencia en desarrollo web y conocimientos en JavaScript, React y Node.js...</p>
         </div>
 
         <div class="card">
-            <button>Aplicar</button>
+            <button class="button-apply">Aplicar</button>
             <p>Analista de datos</p>
             <p>Data Driver Inc. | Remoto</p>
             <p>Buscamos un analista en datos Senior que tenga muchas ganas de trabajar</p>
         </div>
 
         <div class="card">
-            <button>Aplicar</button>
+            <button class="button-apply">Aplicar</button>
             <p>Desarrollador de Aplicaciones Moviles</p>
             <p>Empresa Copada Inc. | Buenos aires Argentina</p>
             <p>Buscamos un crack en Desarrollo de Aplicaciones Moviles</p>
         </div>
 
         <div class="card">
-            <button>Aplicar</button>
+            <button class="button-apply">Aplicar</button>
             <p>Ingeniero de DevOps</p>
             <p>Cloud Service | Bahia Blanca Argentina</p>
             <p>Buscamos un programador llamado Gianluca que sea crack en la programacion</p>
+        </div>
         </div>
     </section>
     <footer>
