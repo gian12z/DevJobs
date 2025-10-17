@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="busqueda_styles.css">
     <script type="module" src="script.js"></script>
+    <script type = "module" src="devjobs-avatar-element.js"></script>
     <title>DevJobs - Busqueda</title>
 </head>
 <body>
@@ -19,6 +20,14 @@
     <div class="acciones">
         <a href="">Subir CV</a>
         <a href="">Iniciar sesión</a>
+    </div>
+    <div>
+    <devjobs-avatar service = "x" username="GianZanconi" size = "32">
+
+    </devjobs-avatar>
+    <devjobs-avatar service = "github" username="gian12z" size = "24">
+        
+    </devjobs-avatar>
     </div>
 </header>
 
@@ -46,7 +55,7 @@
             <option value="fullstack">Fullstack</option>
         </select>
 
-        <select id="ubicacion" name="ubicacion">
+        <select id="filter-ubicacion" name="ubicacion">
             <option value="">Ubicación</option>
             <option value="remoto">Remoto</option>
             <option value="mexico">México</option>
@@ -71,28 +80,28 @@
     <section>
         <h3>Resultados de busqueda</h3>
         <div class="lista-empleos">
-        <div class="card">
+        <div class="card" data-modalidad="remoto">
             <button class="button-apply">Aplicar</button>
             <p>Ingeniero de Software</p>
             <p>Tech Solutions Inc. | Remoto</p>
             <p>Buscamos un ingeniero de software con experiencia en desarrollo web y conocimientos en JavaScript, React y Node.js...</p>
         </div>
 
-        <div class="card">
+        <div class="card" data-modalidad="remoto">
             <button class="button-apply">Aplicar</button>
             <p>Analista de datos</p>
             <p>Data Driver Inc. | Remoto</p>
             <p>Buscamos un analista en datos Senior que tenga muchas ganas de trabajar</p>
         </div>
 
-        <div class="card">
+        <div class="card" data-modalidad="argentina">
             <button class="button-apply">Aplicar</button>
             <p>Desarrollador de Aplicaciones Moviles</p>
             <p>Empresa Copada Inc. | Buenos aires Argentina</p>
             <p>Buscamos un crack en Desarrollo de Aplicaciones Moviles</p>
         </div>
 
-        <div class="card">
+        <div class="card" data-modalidad="argentina">
             <button class="button-apply">Aplicar</button>
             <p>Ingeniero de DevOps</p>
             <p>Cloud Service | Bahia Blanca Argentina</p>
