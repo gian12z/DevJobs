@@ -6,6 +6,68 @@
     <link rel="stylesheet" href="busqueda_styles.css">
     <script type="module" src="script.js"></script>
     <script type = "module" src="devjobs-avatar-element.js"></script>
+    <script type="module">
+    import React from "https://esm.sh/react?dev";
+    import ReactDOM from "https://esm.sh/react-dom/client?dev";
+
+    window.React = React// esto sirve para hacer global la variable React y que los web components lo puedan usar
+    window.ReactDOM = ReactDOM// esto sirve para hacer global la variable ReactDOM y que los web components lo puedan usar
+    </script>
+
+    <script type="text/babel">
+        function JobCard({titulo, empresa, ubicacion, descripcion, data}){
+            const [isApplied, setIsApplied] = React.useState(false);
+
+            function handleClick(){
+                setIsApplied(!isApplied);
+            }
+
+            const text = isApplied ? "Aplicado" : "Aplicar";
+            const buttonClass = isApplied ? "is-applied": "";
+
+            return (
+                <div className="card"
+                data-modalidad={data.modalidad}
+                data-nivel={data.nivel}
+                data-tipo={data.tipo}>
+                    <button disabled={isApplied}
+                    className={`button-apply ${buttonClass}`}
+                    onClick={handleClick}>
+                        {text}
+                    </button>
+                    <p>{titulo}</p>
+                    <p>{empresa} | {ubicacion}</p>
+                    <p>{descripcion}</p>
+                </div>
+            )
+        }
+
+        // Renderizar el componente
+        const container = document.querySelector('.lista-empleos');
+        const root = ReactDOM.createRoot(container);
+        
+        // Ejemplo de uso
+        root.render(// aca van los componentes que queres renderizar o sea los componentes JobCard
+            <>
+                <JobCard 
+                    titulo="Ingeniero de Software"
+                    empresa="Tech Solutions Inc."
+                    ubicacion="Remoto"
+                    descripcion="Buscamos un ingeniero de software con experiencia en desarrollo web..."
+                    data={{modalidad: "remoto", nivel: "senior", tipo: "fulltime"}}
+                />
+                <JobCard 
+                    titulo="Analista de datos"
+                    empresa="Data Driver Inc."
+                    ubicacion="Remoto"
+                    descripcion="Buscamos un analista en datos Senior..."
+                    data={{modalidad: "remoto", nivel: "senior", tipo: "fulltime"}}
+                />
+            </>
+        );
+    </script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
     <title>DevJobs - Busqueda</title>
 </head>
 <body>
@@ -13,7 +75,7 @@
     <h2>DevJobs</h2>
     <nav class="menu">
         <a href="index.html">Inicio</a>
-        <a href="Empleos">Empleos</a>
+        <a href="busqueda.html">Empleos</a>
         <a href="Empresa">Empresa</a>
         <a href="Salarios">Salarios</a>
     </nav>

@@ -1,21 +1,14 @@
-<!DOCTYPE HTML>
+import { useState } from 'react'
 
-<html lang="es">
 
-<head>
-<title>DevJobs - Inicio</title>
-<meta charset="UTF-8">
-<meta name="description" content="Encuentra las mejores ofertas de trabajo para desarrolladores.">
-<!-- conten es lo que aparece cuando buscamos en google, lo resumido-->
-<link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
+function App() {
+    return (
+    <>
     <header>
         <h2>DevJobs</h2>
         <nav>
-            <a href="busqueda.html">Buscar</a><!-- target="_blank" esto haria que la ventana se abriera
-            en otra pestaña directamente-->
+            <a href="busqueda.html">Buscar</a>{/*<!-- target="_blank" esto haria que la ventana se abriera
+            en otra pestaña directamente-->*/}
             <a href="Empleos">Empleos</a>
             <a href="Empresas">Empresas</a>
             <a href="Salarios">Salarios</a>
@@ -36,16 +29,16 @@
             <form role="search">
                 <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                    stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"
+                    className="icon icon-tabler icons-tabler-outline icon-tabler-search">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
                     <path d="M21 21l-6 -6" />
                 </svg>
-                <input required type="text" placeholder="Buscar empleos por título, habilidad o empresa">
+                <input required type="text" placeholder="Buscar empleos por título, habilidad o empresa"/>
 
                 <button type="submit">Buscar</button>
-                <!-- para buscar iconos usar table.ioicons -->
+                {/*<!-- para buscar iconos usar table.ioicons -->*/}
                 </div>
             </form>
         </section>
@@ -97,9 +90,8 @@
 <footer>
     <small>&copy; 2025 DevJobs. Todos los derechos reservados.</small>
 </footer>
-<footer style="padding-bottom: 10px">
+    </>
+  )
+}
 
-</footer>
-</body>
-
-</html>
+export default App
